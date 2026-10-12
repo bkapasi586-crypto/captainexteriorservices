@@ -235,14 +235,9 @@ $$('.ticker-track, .foot-marquee-track, .rv-track').forEach(t => {
 
 /* ---------- "add to my quote" buttons ---------- */
 $$('.add-svc').forEach(b => b.addEventListener('click', () => {
-  const box = $(`#quote-form input[name="svc"][value="${b.dataset.svc}"]`);
-  if (box) box.checked = true;
-  if (b.closest('.svc')) {
-    b.classList.add('added');
-    b.textContent = 'Added to your quote ✓';
-  } else {
-    $('#quote').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-  }
+  const sel = $('#service');
+  if (sel) sel.value = b.dataset.svc;
+  $('#quote').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
 }));
 
 /* ---------- quote form (demo: nothing is sent) ---------- */

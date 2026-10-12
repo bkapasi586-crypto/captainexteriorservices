@@ -483,41 +483,21 @@
           <label>Phone<input name="phone" type="tel" autocomplete="tel" required placeholder="07..." /></label>
         </div>
         <div class="row2">
-          <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" /></label>
           <label>Postcode<input name="postcode" autocomplete="postal-code" required placeholder="HP1 1AA" /></label>
+          <label>Service
+            <select name="service" id="service">
+              <option value="windows" selected>Window cleaning</option>
+              <option value="gutters">Gutters, fascias &amp; soffits</option>
+              <option value="conservatory">Conservatory roof</option>
+              <option value="pressure">Driveway or patio</option>
+              <option value="internal">Internal windows</option>
+              <option value="commercial">Commercial</option>
+              <option value="multiple">More than one service</option>
+            </select>
+          </label>
         </div>
-        <label>Property type
-          <select name="property">
-            <option>Flat or apartment</option>
-            <option>Terraced house</option>
-            <option selected>Semi-detached house</option>
-            <option>Detached house</option>
-            <option>Bungalow</option>
-            <option>Shop, office or commercial</option>
-          </select>
-        </label>
-        <fieldset>
-          <legend>What would you like cleaned?</legend>
-          <div class="chips">
-            <label class="chip"><input type="checkbox" name="svc" value="windows" checked /><span>Windows</span></label>
-            <label class="chip"><input type="checkbox" name="svc" value="gutters" /><span>Gutters, fascias &amp; soffits</span></label>
-            <label class="chip"><input type="checkbox" name="svc" value="conservatory" /><span>Conservatory roof</span></label>
-            <label class="chip"><input type="checkbox" name="svc" value="pressure" /><span>Driveway or patio</span></label>
-            <label class="chip"><input type="checkbox" name="svc" value="internal" /><span>Internal windows</span></label>
-            <label class="chip"><input type="checkbox" name="svc" value="commercial" /><span>Commercial</span></label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>How often?</legend>
-          <div class="chips">
-            <label class="chip"><input type="radio" name="freq" value="4" checked /><span>Every 4 weeks</span></label>
-            <label class="chip"><input type="radio" name="freq" value="8" /><span>Every 8 weeks</span></label>
-            <label class="chip"><input type="radio" name="freq" value="once" /><span>One-off clean</span></label>
-            <label class="chip"><input type="radio" name="freq" value="unsure" /><span>Not sure yet</span></label>
-          </div>
-        </fieldset>
-        <label>Recommended by someone? <small>(they could earn a reward)</small><input name="referrer" placeholder="Their name" /></label>
-        <label>Anything else?<textarea name="msg" rows="3" placeholder="e.g. side gate code, best time to reach you"></textarea></label>
+        <label><span>Recommended by someone? <small>(they could earn a reward)</small></span><input name="referrer" placeholder="Their name" /></label>
+        <label>Anything else?<textarea name="msg" rows="2" placeholder="e.g. house size, side gate, best time to call"></textarea></label>
         <p class="form-err" id="form-err" role="alert" hidden>Please add your name, phone number and postcode so Anthony can price your clean.</p>
         <button class="btn btn-sky btn-lg btn-block" type="submit">Send my free quote request
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
